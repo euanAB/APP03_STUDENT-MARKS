@@ -8,9 +8,7 @@ namespace StudentMarks
         {
             Console.WriteLine("Welcome to the Student Marks program!");
             Console.WriteLine("Euan McGinness - 22209029 - Student Marks Calculator");
-            Console.WriteLine("You will be asked to enter the names and marks of 10 students,");
-            Console.WriteLine("and then you can search for individual students and see their marks.");
-            {
+
             string[] names = new string[10];
             int[] marks = new int[10];
 
@@ -24,32 +22,63 @@ namespace StudentMarks
                 marks[i] = int.Parse(Console.ReadLine());
             }
 
-            // Search for individual students and display their marks
             while (true)
             {
-                Console.Write("Enter the name of the student to search for (or 'quit' to exit): ");
-                string searchName = Console.ReadLine();
+                // Display the menu
+                Console.WriteLine("Please select an operation:");
+                Console.WriteLine("1. Search for a student");
+                Console.WriteLine("2. Display the class average");
+                Console.WriteLine("3. Quit");
 
-                if (searchName.ToLower() == "quit")
-                {
-                    break;
-                }
+                // Get the user's choice
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
 
-                bool found = false;
-                for (int i = 0; i < 10; i++)
+                if (choice == 1)
                 {
-                    if (names[i].ToLower() == searchName.ToLower())
+                    // Search for individual students and display their marks
+                    Console.Write("Enter the name of the student to search for: ");
+                    string searchName = Console.ReadLine();
+
+                    bool found = false;
+                    for (int i = 0; i < 10; i++)
                     {
-                        Console.WriteLine("{0} has {1} marks", names[i], marks[i]);
-                        found = true;
-                        break;
+                        if (names[i].ToLower() == searchName.ToLower())
+                        {
+                            Console.WriteLine("{0} has {1} marks", names[i], marks[i]);
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        Console.WriteLine("Student not found");
                     }
                 }
-
-                if (!found)
+                else if (choice == 2)
                 {
-                    Console.WriteLine("Student not found");
+                    // Display the class average
+                    int totalMarks = 0;
+                    for (int i = 0; i < 10; i++)
+                    {
+                        totalMarks += marks[i];
+                    }
+                    double average = (double)totalMarks / 10;
+                    Console.WriteLine("The class average is {0:F2}", average);
                 }
+                else if (choice == 3)
+                {
+                    // Exit the program
+                    Console.WriteLine("Goodbye!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please try again.");
+                }
+
+                Console.WriteLine(); // Add a blank line for readability
             }
         }
     }
