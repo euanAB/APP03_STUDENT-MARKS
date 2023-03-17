@@ -27,8 +27,9 @@ namespace StudentMarks
                 // Display the menu
                 Console.WriteLine("Please select an operation:");
                 Console.WriteLine("1. Search for a student");
-                Console.WriteLine("2. Display the class average");
-                Console.WriteLine("3. Quit");
+                Console.WriteLine("2. Update a student's marks");
+                Console.WriteLine("3. Display the class average");
+                Console.WriteLine("4. Quit");
 
                 // Get the user's choice
                 Console.Write("Enter your choice: ");
@@ -36,7 +37,7 @@ namespace StudentMarks
 
                 if (choice == 1)
                 {
-                    // Search for individual students and display their marks
+                    // Search for individual students and display their marks and class
                     Console.Write("Enter the name of the student to search for: ");
                     string searchName = Console.ReadLine();
 
@@ -46,6 +47,29 @@ namespace StudentMarks
                         if (names[i].ToLower() == searchName.ToLower())
                         {
                             Console.WriteLine("{0} has {1} marks", names[i], marks[i]);
+
+                            // Determine the grade/class based on the marks
+                            if (marks[i] >= 70 && marks[i] <= 100)
+                            {
+                                Console.WriteLine("Grade: A (First Class)");
+                            }
+                            else if (marks[i] >= 60 && marks[i] <= 69)
+                            {
+                                Console.WriteLine("Grade: B (Upper Second Class)");
+                            }
+                            else if (marks[i] >= 50 && marks[i] <= 59)
+                            {
+                                Console.WriteLine("Grade: Lower Second Class");
+                            }
+                            else if (marks[i] >= 40 && marks[i] <= 49)
+                            {
+                                Console.WriteLine("Grade: D (Third Class)");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Grade: F (Fail)");
+                            }
+
                             found = true;
                             break;
                         }
@@ -58,28 +82,41 @@ namespace StudentMarks
                 }
                 else if (choice == 2)
                 {
+                    // Update a student's marks
+                    Console.Write("Enter the name of the student to update: ");
+                    string updateName = Console.ReadLine();
+
+                    bool found = false;
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (names[i].ToLower() == updateName.ToLower())
+                        {
+                            Console.Write("Enter the new marks for {0}: ", names[i]);
+                            marks[i] = int.Parse(Console.ReadLine());
+                            Console.WriteLine("{0}'s marks have been updated to {1}", names[i], marks[i]);
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    if (!found)
+                    {
+                        Console.WriteLine("Student not found");
+                    }
+                }
+                else if (choice == 3)
+                {
                     // Display the class average
                     int totalMarks = 0;
                     for (int i = 0; i < 10; i++)
                     {
                         totalMarks += marks[i];
-                    }
-                    double average = (double)totalMarks / 10;
-                    Console.WriteLine("The class average is {0:F2}", average);
-                }
-                else if (choice == 3)
-                {
-                    // Exit the program
-                    Console.WriteLine("Goodbye!");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid choice. Please try again.");
-                }
 
-                Console.WriteLine(); // Add a blank line for readability
+                    }
+                }
             }
         }
     }
 }
+
+
