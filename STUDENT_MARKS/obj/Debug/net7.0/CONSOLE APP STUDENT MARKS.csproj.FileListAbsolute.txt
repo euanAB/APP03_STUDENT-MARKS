@@ -1,0 +1,15 @@
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.csproj.AssemblyReference.cache
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.AssemblyInfoInputs.cache
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.AssemblyInfo.cs
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.csproj.CoreCompileInputs.cache
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/bin/Debug/net7.0/CONSOLE APP STUDENT MARKS
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/bin/Debug/net7.0/CONSOLE APP STUDENT MARKS.deps.json
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/bin/Debug/net7.0/CONSOLE APP STUDENT MARKS.runtimeconfig.json
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/bin/Debug/net7.0/CONSOLE APP STUDENT MARKS.dll
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/bin/Debug/net7.0/CONSOLE APP STUDENT MARKS.pdb
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.dll
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/refint/CONSOLE APP STUDENT MARKS.dll
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.pdb
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/CONSOLE APP STUDENT MARKS.genruntimeconfig.cache
+/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/Debug/net7.0/ref/CONSOLE APP STUDENT MARKS.dll

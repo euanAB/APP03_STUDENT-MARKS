@@ -1,40 +1,50 @@
 ﻿using System;
-using System.Numerics;
 
-namespace StudentMarksCalculator
+namespace StudentMarks
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Euan McGinness - 22209029");
-            Console.WriteLine("Student Marks Calculator");
-            Console.WriteLine("-------------------------");
-            Console.WriteLine("Enter the student's name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Enter the student's mark: ");
-            int mark = int.Parse(Console.ReadLine());
-            Console.WriteLine("{0} scored a {1}", name, mark);
-            if (mark >= 85)
+            string[] names = new string[10];
+            int[] marks = new int[10];
+
+            // Get input from user for names and marks
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Grade: A");
-            }
-            else if (mark >= 70)
-            {
-                Console.WriteLine("Grade: B");
-            }
-            else if (mark >= 55)
-            {
-                Console.WriteLine("Grade: C");
-            }
-            else if (mark >= 40)
-            {
-                Console.WriteLine("Grade: D");
+                Console.Write("Enter the name of student #{0}: ", i + 1);
+                names[i] = Console.ReadLine();
+
+                Console.Write("Enter the marks of student #{0}: ", i + 1);
+                marks[i] = int.Parse(Console.ReadLine());
             }
 
-            else
+            // Search for individual students and display their marks
+            while (true)
             {
-                Console.WriteLine("Grade: F");
+                Console.Write("Enter the name of the student to search for (or 'quit' to exit): ");
+                string searchName = Console.ReadLine();
+
+                if (searchName.ToLower() == "quit")
+                {
+                    break;
+                }
+
+                bool found = false;
+                for (int i = 0; i < 10; i++)
+                {
+                    if (names[i].ToLower() == searchName.ToLower())
+                    {
+                        Console.WriteLine("{0} has {1} marks", names[i], marks[i]);
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found)
+                {
+                    Console.WriteLine("Student not found");
+                }
             }
         }
     }
