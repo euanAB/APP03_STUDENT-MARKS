@@ -29,7 +29,8 @@ namespace StudentMarks
                 Console.WriteLine("1. Search for a student");
                 Console.WriteLine("2. Update a student's marks");
                 Console.WriteLine("3. Display the class average");
-                Console.WriteLine("4. Quit");
+                Console.WriteLine("4. Display each student's mark percentage");
+                Console.WriteLine("5. Quit");
 
                 // Get the user's choice
                 Console.Write("Enter your choice: ");
@@ -110,13 +111,10 @@ namespace StudentMarks
                     int totalMarks = 0;
                     for (int i = 0; i < 10; i++)
                     {
-                        totalMarks += marks[i];
-
                     }
                 }
             }
         }
     }
 }
-
 
