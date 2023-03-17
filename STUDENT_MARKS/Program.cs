@@ -6,25 +6,28 @@ namespace StudentMarks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Student Marks program!");
+            Console.WriteLine("Welcome to the Student Mark Calculating program!");
             Console.WriteLine("Euan McGinness - 22209029 - Student Marks Calculator");
 
             string[] names = new string[10];
             int[] marks = new int[10];
 
-            // Get input from user for names and marks
+            // Provide an input marks value for all of the students.
+
             for (int i = 0; i < 10; i++)
             {
-                Console.Write("Enter the name of student #{0}: ", i + 1);
+                Console.Write("Enter the name of student number {0}: ", i + 1);
                 names[i] = Console.ReadLine();
 
-                Console.Write("Enter the marks of student #{0}: ", i + 1);
+                Console.Write("Enter the marks of student number {0}: ", i + 1);
                 marks[i] = int.Parse(Console.ReadLine());
             }
 
             while (true)
             {
-                // Display the menu
+                // Show the user to the admin - let them choose an option to conduct.
+
+
                 Console.WriteLine("Please select an operation:");
                 Console.WriteLine("1. Search for a student");
                 Console.WriteLine("2. Update a student's marks");
@@ -32,13 +35,14 @@ namespace StudentMarks
                 Console.WriteLine("4. Display each student's mark percentage");
                 Console.WriteLine("5. Quit");
 
-                // Get the user's choice
+                // get admins menu choice
                 Console.Write("Enter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
 
                 if (choice == 1)
                 {
-                    // Search for individual students and display their marks and class
+                    // Search for individual students and display their marks, percentage and grade.
+
                     Console.Write("Enter the name of the student to search for: ");
                     string searchName = Console.ReadLine();
 
@@ -49,7 +53,8 @@ namespace StudentMarks
                         {
                             Console.WriteLine("{0} has {1} marks", names[i], marks[i]);
 
-                            // Determine the grade/class based on the marks
+                            // Give the admin an outline to the students marks.
+
                             if (marks[i] >= 70 && marks[i] <= 100)
                             {
                                 Console.WriteLine("Grade: A (First Class)");
@@ -78,13 +83,13 @@ namespace StudentMarks
 
                     if (!found)
                     {
-                        Console.WriteLine("Student not found");
+                        Console.WriteLine("I'm sorry. Thats student cant be found. Please check and try again.");
                     }
                 }
                 else if (choice == 2)
                 {
                     // Update a student's marks
-                    Console.Write("Enter the name of the student to update: ");
+                    Console.Write("Enter the name of the student whose record you want to update: ");
                     string updateName = Console.ReadLine();
 
                     bool found = false;
@@ -92,9 +97,9 @@ namespace StudentMarks
                     {
                         if (names[i].ToLower() == updateName.ToLower())
                         {
-                            Console.Write("Enter the new marks for {0}: ", names[i]);
+                            Console.Write("Enter the new marks for student number {0}: ", names[i]);
                             marks[i] = int.Parse(Console.ReadLine());
-                            Console.WriteLine("{0}'s marks have been updated to {1}", names[i], marks[i]);
+                            Console.WriteLine("{0}'s marks have been updated to {1} for student number {0}.", names[i], marks[i]);
                             found = true;
                             break;
                         }
@@ -102,7 +107,7 @@ namespace StudentMarks
 
                     if (!found)
                     {
-                        Console.WriteLine("Student not found");
+                        Console.WriteLine("I'm sorry. Thats student cant be found. Please check and try again.");
                     }
                 }
                 else if (choice == 3)
