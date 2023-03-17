@@ -6,6 +6,11 @@ namespace StudentMarks
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the Student Marks program!");
+            Console.WriteLine("Euan McGinness - 22209029 - Student Marks Calculator");
+            Console.WriteLine("You will be asked to enter the names and marks of 10 students,");
+            Console.WriteLine("and then you can search for individual students and see their marks.");
+            {
             string[] names = new string[10];
             int[] marks = new int[10];
 

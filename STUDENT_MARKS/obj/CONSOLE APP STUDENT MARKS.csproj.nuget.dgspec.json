@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/CONSOLE APP STUDENT MARKS.csproj": {}
+    "/Users/sbdlondon/Desktop/STUDENT_MARKS_APP/TO SUBMIT/APP03_STUDENT-MARKS/STUDENT_MARKS/CONSOLE APP STUDENT MARKS.csproj": {}
   },
   "projects": {
-    "/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/CONSOLE APP STUDENT MARKS.csproj": {
+    "/Users/sbdlondon/Desktop/STUDENT_MARKS_APP/TO SUBMIT/APP03_STUDENT-MARKS/STUDENT_MARKS/CONSOLE APP STUDENT MARKS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/CONSOLE APP STUDENT MARKS.csproj",
+        "projectUniqueName": "/Users/sbdlondon/Desktop/STUDENT_MARKS_APP/TO SUBMIT/APP03_STUDENT-MARKS/STUDENT_MARKS/CONSOLE APP STUDENT MARKS.csproj",
         "projectName": "CONSOLE APP STUDENT MARKS",
-        "projectPath": "/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/CONSOLE APP STUDENT MARKS.csproj",
+        "projectPath": "/Users/sbdlondon/Desktop/STUDENT_MARKS_APP/TO SUBMIT/APP03_STUDENT-MARKS/STUDENT_MARKS/CONSOLE APP STUDENT MARKS.csproj",
         "packagesPath": "/Users/sbdlondon/.nuget/packages/",
-        "outputPath": "/Users/sbdlondon/Projects/CONSOLE APP STUDENT MARKS/obj/",
+        "outputPath": "/Users/sbdlondon/Desktop/STUDENT_MARKS_APP/TO SUBMIT/APP03_STUDENT-MARKS/STUDENT_MARKS/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sbdlondon/.nuget/NuGet/NuGet.Config"
